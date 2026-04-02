@@ -4,19 +4,19 @@ metadata:
   name: nginx
 spec:
   # affinity:
-  #   nodeAffinity:
-  #     # hard rule
-  #     requiredDuringSchedulingIgnoredDuringExecution:
-  #       nodeSelectorTerms:
-  #       - matchExpressions:
-  #         - key: topology.kubernetes.io/zone
-  #           operator: In
-  #           values:
-  #           - us-east-1b
-  #         # - key: disktype
-  #         #   operator: In
-  #         #   values:
-  #         #   - ssd
+    nodeAffinity:
+      # hard rule
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.kubernetes.io/zone
+            operator: In
+            values:
+            - us-east-1b
+          # - key: disktype
+          #   operator: In
+          #   values:
+          #   - ssd
   #     # soft rule
   #     preferredDuringSchedulingIgnoredDuringExecution:
   #     - weight: 100
